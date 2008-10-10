@@ -1,0 +1,80 @@
+<?php
+
+$images = array();
+$path = 'images/';
+
+$dir = opendir($path);
+
+while ($arq = readdir($dir)) {
+	if ($arq == '.' || $arq == '..') continue;
+	$images[] = $path . $arq;
+}
+
+?>
+<html>
+	<head>
+		<title>Scroll test</title>
+		<style type="text/css">
+		
+		#container {
+			background-color: #000;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 249px;
+			width: 326px;
+			margin-left: 40px;
+		}
+		
+		#container img {
+			border: 2px solid #000;
+		}
+		
+		#container img.hover {
+			border-color: #f00;
+		}
+		
+		#mytext {
+			width: 300px;
+			height: 300px;
+			border: 1px solid #000;
+			overflow: hidden;
+		}
+		
+		#mytext div {
+			width: 300px;
+		}
+		
+		</style>
+		<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="../autoscroll.min.js"></script>
+		<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$('#mytext').autoscroll(AUTOSCROLL_Y);
+			
+			$('#container').autoscroll();
+			$('#container img').hover(
+				function() {$(this).addClass('hover');},
+				function() {$(this).removeClass('hover');}
+			);
+		});
+		
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div style="width: 660px; white-space: normal;">
+				<img src="images/image0.jpg" width="106" height="80" alt="" /><img src="images/image1.jpg" width="106" height="80" alt="" /><img src="images/image2.jpg" width="106" height="80" alt="" /><img src="images/image3.jpg" width="106" height="80" alt="" /><img src="images/image4.jpg" width="106" height="80" alt="" /><img src="images/image5.jpg" width="106" height="80" alt="" /><img src="images/image6.jpg" width="106" height="80" alt="" /><img src="images/image7.jpg" width="106" height="80" alt="" /><img src="images/image8.jpg" width="106" height="80" alt="" /><img src="images/image9.jpg" width="106" height="80" alt="" /><img src="images/image10.jpg" width="106" height="80" alt="" /><img src="images/image11.jpg" width="106" height="80" alt="" /><img src="images/image12.jpg" width="106" height="80" alt="" /><img src="images/image13.jpg" width="106" height="80" alt="" /><img src="images/image14.jpg" width="106" height="80" alt="" /><img src="images/image15.jpg" width="106" height="80" alt="" /><img src="images/image16.jpg" width="106" height="80" alt="" /><img src="images/image17.jpg" width="106" height="80" alt="" /><img src="images/image18.jpg" width="106" height="80" alt="" /><img src="images/image19.jpg" width="106" height="80" alt="" /><img src="images/image20.jpg" width="106" height="80" alt="" /><img src="images/image21.jpg" width="106" height="80" alt="" /><img src="images/image22.jpg" width="106" height="80" alt="" /><img src="images/image23.jpg" width="106" height="80" alt="" /><img src="images/image24.jpg" width="106" height="80" alt="" /><img src="images/image25.jpg" width="106" height="80" alt="" /><img src="images/image26.jpg" width="106" height="80" alt="" /><img src="images/image27.jpg" width="106" height="80" alt="" /><img src="images/image28.jpg" width="106" height="80" alt="" /><img src="images/image29.jpg" width="106" height="80" alt="" /><img src="images/image30.jpg" width="106" height="80" alt="" /><img src="images/image31.jpg" width="106" height="80" alt="" /><img src="images/image32.jpg" width="106" height="80" alt="" /><img src="images/image33.jpg" width="106" height="80" alt="" />
+			</div>
+		</div>
+		<br /><br />
+		<div id="mytext">
+			<div>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+	</body>
+</html>
