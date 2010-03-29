@@ -1,16 +1,3 @@
-<?php
-
-$images = array();
-$path = 'images/';
-
-$dir = opendir($path);
-
-while ($arq = readdir($dir)) {
-	if ($arq == '.' || $arq == '..') continue;
-	$images[] = $path . $arq;
-}
-
-?>
 <html>
 	<head>
 		<title>Scroll test</title>
@@ -46,7 +33,7 @@ while ($arq = readdir($dir)) {
 		
 		</style>
 		<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
-		<script type="text/javascript" src="../autoscroll.min.js"></script>
+		<script type="text/javascript" src="../autoscroll.js"></script>
 		<script type="text/javascript">
 		
 		$(document).ready(function() {
