@@ -1,0 +1,35 @@
+body {
+	background: #023065;
+	margin: 0;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+code, pre {
+	font-family: monospace;
+}
+
+#container {
+	background: #fff;
+	width: 700px;
+	margin: 0 auto;
+	padding: 10px 30px;
+}
+
+#description {
+	width: 380px;
+	height: 100px;
+	padding: 10px;
+	border: 2px solid #000;
+	overflow: hidden;
+}
+
+#description div {
+	width: 380px;
+}
+
+.download {
+	float: right;
+}
